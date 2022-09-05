@@ -1,0 +1,39 @@
+.Input {
+  position: relative;
+  margin: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.Input label {
+  margin-right: .5rem;
+}
+
+.Input input {
+  display: inline-block;
+  width: 100%;
+  background-color: #e2e8f0;
+  border: 2px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+  line-height: 20px;
+  padding: 8px 12px;
+  transition: 0.3s ease-in-out;
+  outline: none;
+  text-align: center;
+}
+
+.Input input:focus,
+.Input input:active {
+  background-color: #fff;
+  border-color: inherit;
+  outline: none;
+}
+
+.Input input::placeholder {
+  color: #4a556896;
+}
+
+.Input.error input {
+  border: 2px solid #E53E3E;
+  border-radius: 4px;
+}

@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# Ejercicio Técnico - Sngular
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto técnico para Sngular donde se implementa las series de Fibonacci, numero primos y números triangulares para crear una serie dada.
 
-## Available Scripts
+![Serie-Sngular](./src/img/formula.png)
 
-In the project directory, you can run:
+## **Proyecto**
 
-### `npm start`
+El proyecto se creo con la librería de React en diferentes componentes para el formulario y ua clase para el calculo de las series antes mencionadas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalar proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para instalar las dependencias se deberá realizar el comando inicial de npm
 
-### `npm test`
+```console
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ Esto deberá instalar todas las dependencias necesarias para el funcionamiento correcto del proyecto.
 
-### `npm run build`
+### Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El proyecto cuenta con los scrips para `test`, `build` y `start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Script Test: Test de los componentes y clase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```console
+  npm run test
+  ```
 
-### `npm run eject`
+- Script Build: Construcción del proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  ```console
+  npm run build
+  ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Script Start: Inicia servidor para pruebas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  ```console
+  npm run start
+  ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Sobre el proyecto
 
-## Learn More
+El proyecto esta construido con ReactJS. Se integran diferentes componentes de acuerdo a los requerimientos para el funcionamiento.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Se pueden modificar algunos aspectos visuales como el color del botón
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- blue
+- gray
+- green
+- red
 
-### Code Splitting
+y el tamaño
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- sm
+- md
+- lg
 
-### Analyzing the Bundle Size
+El resultado de la secuencia puede ser modificado de acuerdo a las necesidades, se deberá modificar en la expresión `handleClick()` el método de retorno de la serie.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Los métodos que se pueden extraer de la clase son:
 
-### Making a Progressive Web App
+- `primeNumbers()`
+- `fibonacci()`
+- `triangularNumber()`
+- `serieNumber(version)`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Se deberá crear la clase con un valor n para acceder a estos métodos.
 
-### Advanced Configuration
+El método `serieNumber(version)` cuenta con 2 versiones para el calculo, la version predeterminada es le 'v1':
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- 'v1': En la version 1 el método realiza un calculo tomando en cuenta el valor de la posición n de la secuencia solicitada sumando o restando dependiendo el caso para los valores de primo y triangular.
 
-### Deployment
+  Ejemplo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  Tomando en cuenta que $n=1$
 
-### `npm run build` fails to minify
+  - Conversion de numero primo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    $primo(n + 2) = 2 + 2 =4$
+
+  - Conversion de numero triangular
+
+    $triangular(n-1) = 1-2=-1$
+
+  - Conversion de numero de Fibonacci
+
+    $7*fibonacci(n) = 7*1=7$
+
+  - Conversion de formula serie con valores reales
+
+    $(2*4*3*-1)/7 = -3.428$
+
+- 'v2': Para la version 2 el método realizar el calculo en base a valor de n sumando o restando dependiendo el caso, primo y triangular respectivamente, y tomando en cuenta el valor de dicho calculo para la sustitución en la formula.
+
+  Ejemplo:
+
+  Tomando en cuenta que $n=1$
+
+  - Conversion de numero primo
+
+    $n+2 = 1 +2 = 3$
+
+    $primo(3) = 5$
+
+  - Conversion de numero triangular, para los casos negativos se toma como inicial el valor 1
+
+    $n-2= 1$
+
+    $triangular(1) = 1$
+
+  - Conversion de numero de Fibonacci
+
+    $7*fibonacci(n) = 7*1=7$
+
+  - Conversion de formula serie con valores reales
+
+    $(2*5*3*1)/7 = 4.285$
+
+## Resultado
+
+La instalación del proyecto deberá verse asi:
+
+![App](./src/img/app.png)
+
+Funcionando todos los componente en una sola aplicación.
+
+### Contacto
+
+Si tienes alguna mejora que me pudiera ayudar en su estructura o funcionamiento agradecería enormemente el apoyo.

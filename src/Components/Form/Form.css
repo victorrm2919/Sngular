@@ -1,0 +1,15 @@
+.Form {
+  padding: 1.2rem 2rem 2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  color: #4a5568;
+  line-height: 26px;
+
+}
+
+@media (min-width: 992px) {
+  .Form {
+    margin-right: 2rem;
+  }
+}
