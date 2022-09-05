@@ -18,6 +18,7 @@ const App = () => {
   const [valueSerie, setValueSerie] = React.useState('');
   const [classError, setClassError] = React.useState(false);
 
+  // Obtención de datos para resultado
   const handleClick = React.useCallback(n => {
     if (n === 0) {
       return 'Captura un numero para iniciar la serie';

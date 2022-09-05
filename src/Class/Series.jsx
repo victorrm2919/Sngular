@@ -86,7 +86,9 @@ class Serie extends React.Component {
       } else {
         return "version does not exist";
       }
-      serie.push(number);
+
+      let dataNumber = Math.trunc(number) === number ? number : number.toFixed(2);
+      serie.push(dataNumber);
     }
 
     return serie;
