@@ -2,7 +2,7 @@ import Serie from './Series';
 
 describe('Valida los primeros 10 numero de la secuencias', () => {
   it('Valida los números de la secuencia v1', () => {
-    const know = [-3.4285714285714284, 4.285714285714286, 12, 20.571428571428573, 28.97142857142857, 30.535714285714285, 32.57142857142857, 29.142857142857142, 27.100840336134453, 25.605194805194806];
+    const know = [ -3.43, 4.29, 12, 20.57, 28.97, 30.54, 32.57, 29.14, 27.1, 25.61 ]
 
     for (let i = 0; i < know.length; i++) {
       let newKnow = know.slice(0, i + 1);
@@ -11,7 +11,7 @@ describe('Valida los primeros 10 numero de la secuencias', () => {
   });
 
   it('Valida los números de la secuencia v2', () => {
-    const know = [4.285714285714286, 6, 4.714285714285714, 11.142857142857142, 17.485714285714284, 20.357142857142858, 22.747252747252748, 24.857142857142858, 21.88235294117647, 20.758441558441557];
+    const know = [ 4.29, 6, 4.71, 11.14, 17.49, 20.36, 22.75, 24.86, 21.88, 20.76 ]
 
     for (let i = 0; i < know.length; i++) {
       let newKnow = know.slice(0, i + 1);
